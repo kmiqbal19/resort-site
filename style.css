@@ -10,6 +10,17 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(76, 76, 82, 0.322);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(76, 76, 82, 0.986);
+}
 /*********************************************** Utility Components  *************************************************/
 :root {
   font-size: 62.5%;
@@ -65,6 +76,7 @@ body {
   font-family: "Titillium Web", sans-serif;
   line-height: 1.7;
   background-color: var(--color-quaternary);
+  overflow: overlay;
 }
 
 .container {
@@ -107,7 +119,7 @@ li {
 /* Icons */
 i {
   font-size: var(--font-size-title);
-  color: rgba(53, 38, 38, 0.863);
+  color: rgba(139, 155, 68, 0.863);
 }
 
 /* Main Styling */
@@ -1000,13 +1012,16 @@ section#testimonials {
 }
 
 .testimonials__card--front h2 {
-  background-color: var(--color-secondary-m-light);
+  background-color: hsla(0, 0%, 13%, 0.55);
+  color: white;
   padding: 1rem;
   border-bottom-right-radius: 50%;
   border-bottom-left-radius: 50%;
+  font-family: "Avenir";
 }
 
 .testimonials__card--back p {
+  font-family: "Avenir";
   place-self: center;
   font-size: 2rem;
   font-weight: 400;
@@ -1052,48 +1067,55 @@ section#testimonials {
 
 /*@@##$$%%^^&&**@@##$$%%^^&&**^^ Footer Section ^^**@@##$$%%^^&&**@@##$$%%^^&&*/
 footer#footer {
-  background-color: var(--color-primary);
+  background-color: hsla(0, 0%, 0%, 0.863);
   grid-column: container-start / container-end;
-  padding: 6vh 4vw;
+  padding: 1vh 3vw;
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   place-items: center;
 }
+footer#footer p {
+  font-family: "Avenir";
+  font-size: 1.5rem;
+}
 
 .footer__social--link:link,
 .footer__social--link:visited {
   display: inline-block;
-  background-color: var(--color-secondary);
-  border-radius: 4rem;
+  /* background-color: rgb(250, 226, 226); */
+  /* border-radius: 4rem; */
   margin-right: 1rem;
-  box-shadow: 0.5rem 0.5rem 2rem 0.5rem var(--color-secondary-m-light),
-    -0.5rem -0.5rem 2rem 0.5rem var(--color-secondary-m-light);
-  transform: scale(0.8);
-  animation: social 3s linear infinite;
+  /* box-shadow: 0.5rem 0.5rem 2rem 0.5rem var(--color-secondary-m-light),
+    -0.5rem -0.5rem 2rem 0.5rem var(--color-secondary-m-light); */
+  /* transform: scale(0.8); */
+  /* animation: social 3s linear infinite; */
 }
 
 .footer__social--link i {
   font-size: 2rem;
-  color: var(--color-primary);
+  color: hsla(0, 11%, 89%, 0.808);
+  transition: all 0.2s ease;
 }
-
-@keyframes social {
+.footer__social--link:hover i {
+  transform: scale(1.1) translateY(-3px);
+}
+/* @keyframes social {
   0% {
     opacity: 0;
   }
 
   50% {
     opacity: 1;
-    transform: scale(1.2);
+    transform: scale(1);
   }
 
   100% {
     opacity: 0;
   }
-}
+} */
 
-.footer__social--link:link:nth-child(1),
+/* .footer__social--link:link:nth-child(1),
 .footer__social--link:visited:nth-child(1) {
   animation-delay: 0s;
 }
@@ -1111,7 +1133,7 @@ footer#footer {
 .footer__social--link:link:nth-child(4),
 .footer__social--link:visited:nth-child(4) {
   animation-delay: 0.9s;
-}
+} */
 
 /************************************************************ 1000px Mark ***********************************************************/
 @media screen and (max-width: 1000px) {
