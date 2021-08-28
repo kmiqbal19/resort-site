@@ -50,7 +50,7 @@
   --color-quinary: #3b3b3b;
   --color-quinary-m-light: hsla(0, 0%, 13%, 0.55);
   --color-quinary-m-dark: hsla(0, 0%, 17%, 0.85);
-
+  --color-border-gallery: hsl(0, 0, 13%);
   /* Transtion Duration */
   --transition-duration: 0.3s;
 
@@ -107,7 +107,7 @@ li {
 /* Icons */
 i {
   font-size: var(--font-size-title);
-  color: var(--color-secondary);
+  color: rgba(53, 38, 38, 0.863);
 }
 
 /* Main Styling */
@@ -597,7 +597,7 @@ div[class^="villas"] h2[class^="villas"] {
 }
 
 div[class^="villas"] p[class^="villas"] {
-  font-size: 2re;
+  font-size: 2rem;
   margin: 1.5rem 0 4rem 0;
   color: white;
   font-weight: 500;
@@ -607,8 +607,8 @@ div[class^="villas"] a[class^="villas"]:link,
 div[class^="villas"] a[class^="villas"]:visited {
   display: inline-block;
   margin-bottom: 2rem;
-  background-color: white;
-  color: var(--color-primary);
+  background-color: hsla(0, 0%, 13%, 0.55);
+  color: white;
   z-index: 2;
   overflow: hidden;
 }
@@ -647,17 +647,18 @@ div[class^="villas"] a[class^="villas"]:active::before {
 }
 
 .villas__villa-1 {
-  /* background: linear-gradient(
-      var(--color-primary-m-light),
-      var(--color-tertiary-m-light)
-    ), */
-
-  background: url("img/Villas/villa-1.jpg");
+  background: linear-gradient(
+      rgba(29, 129, 146, 0.39),
+      rgba(223, 82, 82, 0.534),
+      rgba(255, 196, 0, 0.233)
+    ),
+    url("img/Villas/villa-1.jpg");
 }
 
 .villas__villa-2 {
   background: linear-gradient(
-      var(--color-primary-m-light),
+      rgba(29, 129, 146, 0.39),
+      rgba(0, 0, 0, 0.329),
       var(--color-tertiary-m-light)
     ),
     url("img/Villas/villa-2.jpg");
@@ -665,23 +666,26 @@ div[class^="villas"] a[class^="villas"]:active::before {
 
 .villas__villa-3 {
   background: linear-gradient(
+      rgba(146, 144, 29, 0.39),
       var(--color-primary-m-light),
-      var(--color-tertiary-m-light)
+      rgba(243, 133, 238, 0.596)
     ),
     url("img/Villas/villa-3.jpg");
 }
 
 .villas__villa-4 {
   background: linear-gradient(
-      var(--color-primary-m-light),
-      var(--color-tertiary-m-light)
+      rgba(77, 77, 77, 0.637),
+      var(--color-tertiary-m-light),
+      rgba(56, 56, 230, 0.39)
     ),
     url("img/Villas/villa-4.jpg");
 }
 
 .villas__villa-5 {
   background: linear-gradient(
-      var(--color-primary-m-light),
+      rgba(77, 179, 64, 0.609),
+      rgba(206, 54, 54, 0.623),
       var(--color-tertiary-m-light)
     ),
     url("img/Villas/villa-5.jpg");
@@ -697,7 +701,7 @@ div[class^="villas"] a[class^="villas"]:active::before {
 
 /*@@##$$%%^^&&**@@##$$%%^^&&**^^ Motto Section ^^**@@##$$%%^^&&**@@##$$%%^^&&*/
 section#motto {
-  background-color: var(--color-primary);
+  /* background-color: var(--color-primary); */
   grid-column: container-start / container-end;
   padding: 10vh 3vw;
 }
@@ -712,10 +716,11 @@ section#motto {
   font-size: var(--font-size-title);
   padding: 0 2rem 1rem;
   font-weight: 300;
-  color: white;
-  text-transform: uppercase;
+  color: rgba(48, 47, 47, 0.856);
+  /* text-transform: uppercase; */
   margin-bottom: 2rem;
   position: relative;
+  font-family: "Avenir";
 }
 
 .motto__content--title::after {
@@ -725,9 +730,13 @@ section#motto {
   left: 45%;
   height: 0.2rem;
   width: 10%;
-  background-color: white;
+  background-color: var(--color-secondary);
 }
-
+.motto__content--para {
+  color: hsla(0, 0%, 13%, 0.55);
+  font-weight: 300;
+  font-family: "Avenir";
+}
 /*@@##$$%%^^&&**@@##$$%%^^&&**^^ Events Content Section ^^**@@##$$%%^^&&**@@##$$%%^^&&*/
 section#events-content,
 section#features-content {
@@ -751,21 +760,15 @@ section#features-content > div {
 }
 
 section#events-content > div:first-child {
-  background: linear-gradient(
-      var(--color-tertiary-m-light),
-      var(--color-tertiary-m-light)
-    ),
-    url("img/Events/beach-party.jpg");
-  border-right: solid 0.2rem var(--color-tertiary);
+  background: linear-gradient(rgba(0, 0, 0, 0.589), transparent),
+    url("https://i.ibb.co/xXdkh1b/muhammadh-saamy-GO1i2timuug-unsplash.jpg");
+  /* border-right: solid 0.2rem var(--color-tertiary); */
 }
 
 section#events-content > div:last-child {
-  background: linear-gradient(
-      var(--color-tertiary-m-light),
-      var(--color-tertiary-m-light)
-    ),
+  background: linear-gradient(rgba(0, 0, 0, 0.589), transparent),
     url("img/Events/culture-discovery.jpg");
-  border-left: solid 0.2rem var(--color-tertiary);
+  /* border-left: solid 0.2rem var(--color-tertiary); */
 }
 
 section#events-content > div:first-child,
@@ -778,7 +781,7 @@ section#events-content > div h2[class*="title"],
 section#features-content > div h2[class*="title"] {
   grid-area: title;
   font-size: var(--font-size-title);
-  font-weight: 400;
+  font-weight: 300;
   color: white;
 }
 
@@ -786,13 +789,19 @@ section#events-content > div p[class*="para"],
 section#features-content > div p[class*="para"] {
   grid-area: para;
   color: white;
-  font-weight: 500;
+  font-weight: 300;
+  font-size: 1.8rem;
+  padding: 4rem 0rem;
+  line-height: 1.8;
 }
 
 /*@@##$$%%^^&&**@@##$$%%^^&&**^^ Events Text Section ^^**@@##$$%%^^&&**@@##$$%%^^&&*/
+section#events-content {
+  background-color: var(--color-secondary);
+}
 section#events-text,
 section#features-text {
-  background-color: var(--color-tertiary);
+  background-color: var(--color-secondary);
   grid-column: col-start 10 / center-end;
 
   display: grid;
@@ -817,7 +826,7 @@ section#features-text {
 
 /*@@##$$%%^^&&**@@##$$%%^^&&**^^ Gallery Text Section ^^**@@##$$%%^^&&**@@##$$%%^^&&*/
 section#gallery-text {
-  background-color: var(--color-primary);
+  background-color: hsla(0, 0%, 13%);
   grid-column: center-start / col-end 1;
 
   display: grid;
@@ -829,14 +838,17 @@ section#gallery-text {
 .gallery-text__content {
   transform: rotate(-0.25turn);
 }
-
+.gallery-text__content--title {
+  font-family: "Avenir";
+}
 /*@@##$$%%^^&&**@@##$$%%^^&&**^^ Gallery Carousel Section ^^**@@##$$%%^^&&**@@##$$%%^^&&*/
 section#gallery-carousel {
   grid-column: col-start 2 / container-end;
   height: 90vh;
   overflow: hidden;
-  border: solid 0.2rem var(--color-secondary);
+  border: solid 10rem;
   position: relative;
+  border: solid 0.2rem var(--color-border-gallery);
 }
 
 /* Image Container */
@@ -909,14 +921,14 @@ div.gallery-carousel__img-container {
   height: 2rem;
   width: 2rem;
   border-radius: 50%;
-  background-color: var(--color-secondary);
+  background-color: rgba(33, 33, 33, 0.527);
   border: none;
   cursor: pointer;
 }
 
 /* Current Button/Image */
 .current--img {
-  background-color: var(--color-primary);
+  background-color: rgb(168, 158, 158);
 }
 
 /* To hide the arrows */
@@ -926,21 +938,15 @@ div.gallery-carousel__img-container {
 
 /*@@##$$%%^^&&**@@##$$%%^^&&**^^ Features Content Section ^^**@@##$$%%^^&&**@@##$$%%^^&&*/
 section#features-content > div:first-child {
-  background: linear-gradient(
-      var(--color-secondary-m-light),
-      var(--color-secondary-m-light)
-    ),
-    url("img/Features/cocktail.jpg");
-  border-right: solid 0.2rem var(--color-secondary);
+  background: linear-gradient(rgba(0, 0, 0, 0.623), transparent),
+    url("https://i.ibb.co/tDRJXGw/elevate-k-DPm1-On9jfs-unsplash.jpg");
+  /* border-right: solid 0.2rem var(--color-secondary); */
 }
 
 section#features-content > div:last-child {
-  background: linear-gradient(
-      var(--color-secondary-m-light),
-      var(--color-secondary-m-light)
-    ),
+  background: linear-gradient(rgba(0, 0, 0, 0.623), transparent),
     url("img/Features/surfing.jpg");
-  border-left: solid 0.2rem var(--color-secondary);
+  /* border-left: solid 0.2rem var(--color-secondary); */
 }
 
 section#features-content > div:first-child,
@@ -951,7 +957,8 @@ section#features-content > div:last-child {
 
 /*@@##$$%%^^&&**@@##$$%%^^&&**^^ Features Text Section ^^**@@##$$%%^^&&**@@##$$%%^^&&*/
 section#features-text {
-  background-color: var(--color-secondary);
+  background-color: hsl(0, 0%, 13%);
+  font-family: "Avenir";
 }
 
 /*@@##$$%%^^&&**@@##$$%%^^&&**^^ Testimonials Section ^^**@@##$$%%^^&&**@@##$$%%^^&&*/ /* a word not award */
