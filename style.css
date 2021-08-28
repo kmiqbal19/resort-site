@@ -1,6 +1,7 @@
 /* Imports */
 @import url("./fonts/IvyMode/style.css");
 @import url("./fonts/Avenir-Light/style.css");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
 /* Reset  */
 *,
 *::before,
@@ -119,7 +120,7 @@ li {
 /* Icons */
 i {
   font-size: var(--font-size-title);
-  color: rgba(139, 155, 68, 0.863);
+  color: rgba(247, 27, 27, 0.863);
 }
 
 /* Main Styling */
@@ -346,16 +347,21 @@ header#header {
   height: 90%;
   justify-items: center;
 }
-
+.main-logo {
+  width: 8rem;
+  height: 3rem;
+  margin-top: 1rem;
+}
 .header__logo__content--logo {
   grid-column: 2 / 3;
   letter-spacing: 0.2rem;
+  text-align: center;
 }
 
-.header__logo__content--logo span {
-  color: var(--color-tertiary);
-  font-size: 3rem;
-  font-family: "Times New Roman", Times, serif;
+.header__logo__content--logo p {
+  color: rgba(214, 213, 213, 0.904);
+  font-size: 1.1rem;
+  font-family: "Courgette", cursive;
 }
 
 .header__logo__content--content {
@@ -377,6 +383,7 @@ header#header {
 .header__logo__content--content__para {
   font-size: calc(0.5rem + 1vw);
   /* font-weight: 500; */
+  letter-spacing: 1.5px;
   padding: 2vh 2rem 6vh var(--font-size-title);
 }
 
@@ -477,6 +484,10 @@ section#booking-content {
   grid-template-rows: 10vh;
   justify-items: start;
   align-items: center;
+}
+.fa-sun,
+.fa-clock {
+  color: var(--color-secondary);
 }
 .booking-content__icons--weather p,
 .booking-content__icons--time p {
@@ -940,7 +951,7 @@ div.gallery-carousel__img-container {
 
 /* Current Button/Image */
 .current--img {
-  background-color: rgb(168, 158, 158);
+  background-color: rgb(255, 255, 255);
 }
 
 /* To hide the arrows */
